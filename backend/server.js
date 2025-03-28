@@ -27,6 +27,22 @@ app.get('/bolos/:tema_id', (req, res) => {
     });
 });
 
+
+app.get('/bolo/:id', (req, res) => {
+    const {id} = req.params;
+    db.query('SELECT * FROM bolos WHERE id = ?', [id], (err, results) =>{if (err){
+        res.status(500).json({error: err.message});
+        return;
+    }
+    if(results.length === 0){
+        res.status(404).json({message: 'Bolo não encontrado'});
+        return;
+    }
+    res.json(results[0]);
+
+    });
+});
+
 const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
