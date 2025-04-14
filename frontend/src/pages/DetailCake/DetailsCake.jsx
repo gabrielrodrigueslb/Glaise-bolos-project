@@ -13,6 +13,8 @@ export default function DetailsCake() {
   const [cake, setCake] = useState(null);
   const [openForm, setOpenForm] = useState(false);
 
+  // let mensagem = `Olá Glaise! Gostaria de fazer um orçamento com você. Tenho como referencia esse modelo:${cake.img}`;
+
   let [theme, setTheme] =  useState([]);
 
   useEffect(() => {
@@ -75,7 +77,7 @@ export default function DetailsCake() {
               </li>
             </ul>
           </div>
-          <button onClick={handleButton} className='orcamento-btn'>Fazer Orçamento</button>
+          <a href={`https://wa.me/+5531989899622?text=Olá Glaise! Gostaria de fazer um orçamento com você.`} target='_blank' onClick={handleButton} className='orcamento-btn'>Fazer Orçamento</a>
         </section>
       </main>
     </section>
