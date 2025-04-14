@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$colorPrimary: #fd8b8b;
+$colorSecondary: #814827;
+$colorWhite: #fff;
+$colorText: rgba(129, 72, 39, 0.75);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  color: $colorSecondary;
+}
+
+a{
+  text-decoration: none;
+  color: $colorPrimary;
+}
+
+p {
+  color: $colorText;
+}
+h1,
+h2 {
+  color: $colorSecondary;
+}
+span {
+  color: $colorPrimary;
+}
+
+ul, li {
+  list-style: none;
+}
+
+
+
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+.container-alt {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-inline: 30px;
+}
+.container-alt2 {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-inline: 30px;
+}
+
+.background {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFBEB 100%);
+}
+.background2 {
+  background: linear-gradient(0deg, #FFFFFF 0%, #FFFBEB 100%);
+}
+.background-alt{
+  background: #814827;
+}
+
+.btn {
+  padding: .96rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $colorPrimary;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 40%);
+  border-radius: 50%;
+  color: $colorWhite;
+  cursor: pointer;
+  transition: 0.1s;
+  &:hover {
+    color: $colorPrimary;
+    transition: 0.1s;
+    background: $colorWhite;
+  }
+}
+.btn-2 {
+  padding: 14px 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $colorWhite;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 20%);
+  color: $colorPrimary;
+  cursor: pointer;
+  transition: 0.1s;
+  justify-self: center;
+  border: none;
+  font-weight: bold;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  border-radius:24px ;
+  margin-top: 31px;
+  &:hover {
+    color: $colorWhite;
+    transition: 0.1s;
+    background: $colorPrimary;
+    transform: scale(1.05);
+  }
+}
+
+.title {
+  color: $colorSecondary;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  position: relative;
+  align-items: end;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: $colorPrimary;
+    margin-bottom: 13px;
+    margin-left: 5px;
+  }
+}
+.title-alt {
+  color: $colorWhite;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  position: relative;
+  align-items: end;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: $colorPrimary;
+    margin-bottom: 13px;
+    margin-left: 5px;
+  }
+}
+
+
+@media (max-width: 700px){
+  .title {
+    font-size: 1.5rem;
+
+    &::after {
+      width: 5px;
+      height: 5px;
+      margin-bottom: 10px;
+      margin-left: 3px;
+    }
+  }
+  .title-alt {
+    font-size: 1.5rem;
+
+    &::after {
+      width: 5px;
+      height: 5px;
+      margin-bottom: 10px;
+      margin-left: 3px;
+    }
+  }
+  .btn {
+    padding: 14px;
+  }
+
+  .btn-2 {
+    padding: 14px 50px;
+    font-size: 1rem;
+  }
+  p{
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 420px){
+  .title {
+    font-size: 1.5rem;
+
+    &::after {
+      width: 5px;
+      height: 5px;
+      margin-bottom: 10px;
+      margin-left: 3px;
+    }
+  }
+  .title-alt {
+    font-size: 1.5rem;
+
+    &::after {
+      width: 5px;
+      height: 5px;
+      margin-bottom: 10px;
+      margin-left: 3px;
+    }
+  }
+  .btn {
+    padding: 14px;
+  }
+
+  .btn-2 {
+    padding: 14px 40px;
+    text-wrap: nowrap;
+    font-size: .8rem;
+  }
+  p{
+    font-size: 0.875rem;
+  }
+}

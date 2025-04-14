@@ -1,0 +1,34 @@
+
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: #FD8B8B !important;
+    width: 60px !important;
+    border-radius: 5px !important;
+    transition: 0.2s;
+    
+    
+}
+
+.swiper-pagination-bullet{
+    background: #FD8B8B !important;
+    width: 30px !important;
+    border-radius: 5px !important;
+    transition: 0.2s;
+}
+
+.mySwiper-mobile{ 
+    display: none;
+
+    img{
+        max-width: 100%;
+        height: 100%;
+
+    }
+}
+
+
+@media (max-width: 480px) {
+.mySwiper-mobile {
+  display: block;
+}
+}
