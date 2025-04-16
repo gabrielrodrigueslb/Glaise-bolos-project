@@ -19,6 +19,8 @@ fetchBolos();
 }, [id]);
 
 
+const baseURL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+
 
 
   return (
@@ -28,7 +30,7 @@ fetchBolos();
       <main className="theme">
         <section className='theme-galery container'>
         {bolos.length === 0 ? (<p>Carregando...</p>): (bolos.map((bolo) => (
-          <Link to={`/details/${bolo.id}`} key={bolo.id} className='img-container'><img src={bolo.img} alt={bolo.name} /></Link>
+          <Link to={`/details/${bolo.id}`} key={bolo.id} className='img-container'><img src={`${baseURL}${bolo.img}`} alt={bolo.name} /></Link>
         )))}
 
 

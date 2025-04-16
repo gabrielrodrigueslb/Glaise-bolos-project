@@ -29,7 +29,9 @@ console.log(theme)
         <section className="themes-list container">
 
           
-          {theme.length === 0 ? (<p>Carregando...</p>) : (theme.map((tema) => (
+          {theme.length === 0 ? (<p>Carregando...</p>) : (theme.map((tema) => {
+            console.log(tema.img);
+            return(
             <ThemeCard 
             key={tema.id}
             id={tema.id}
@@ -38,9 +40,9 @@ console.log(theme)
             img={tema.img}
 
             />
-            
-
-          )))}
+            )
+})
+          )}
             
               
           

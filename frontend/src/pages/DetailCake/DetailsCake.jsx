@@ -15,6 +15,8 @@ export default function DetailsCake() {
 
   // let mensagem = `Olá Glaise! Gostaria de fazer um orçamento com você. Tenho como referencia esse modelo:${cake.img}`;
 
+  const baseURL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+
   let [theme, setTheme] =  useState([]);
 
   useEffect(() => {
@@ -56,7 +58,7 @@ export default function DetailsCake() {
           </span>
         </Link>
         <div className="img-bg">
-          <img className="img container" src={cake.img} alt="" />
+          <img className="img container" src={`${baseURL}${cake.img}`} alt={cake.name} />
         </div>
 
         <section className="details-content container-alt">
