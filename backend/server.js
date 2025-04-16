@@ -1,10 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./config/db');
-
 const app = express();
+const path = require('path')
+
 app.use(cors());
 app.use(express.json());
+app.use('/uploads', express.static(path.join(__dirname, '../../uploads')));
+
+app.use('/uploads/cakes', express.static(path.join(__dirname,'../../.test./uploads/cakes')));
+
 
 app.get('/temas', (req, res) => {
     db.query('SELECT * FROM temas', (err, results) => {
@@ -42,6 +47,8 @@ app.get('/bolo/:id', (req, res) => {
 
     });
 });
+
+
 
 const PORT = 5000;
 app.listen(PORT, () => {
